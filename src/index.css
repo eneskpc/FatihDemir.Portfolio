@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+
+.text-shadow {
+  text-shadow: 0 0 3px #fff;
+}
+
+.ice-box {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+}
+
+#menu a.active{
+    @apply bg-slate-200 rounded;
+}
+
+@tailwind utilities;
