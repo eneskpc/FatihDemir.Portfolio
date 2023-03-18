@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import App from './App'
-import Home from './Home'
-import GeneralPage from './GeneralPage'
+import App from './components/App'
+import Home from './components/Home'
+import GeneralPage from './components/GeneralPage'
+import store from './app/store'
+import { Provider } from 'react-redux'
 import './index.css'
+import Videos from './components/Videos'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -13,6 +16,9 @@ const router = createBrowserRouter([{
     index: true,
     element: <Home />
   }, {
+    path: "/videolar",
+    element: <Videos />
+  }, {
     path: "/:page",
     element: <GeneralPage />
   }]
@@ -20,6 +26,8 @@ const router = createBrowserRouter([{
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )

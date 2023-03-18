@@ -9,6 +9,9 @@ const HeaderMenu = () => {
             <NavLink className="px-5 font-bold py-2 transition-all text-slate-600 hover:text-slate-400" to={"/hakkinda"}>
                 HAKKINDA
             </NavLink>
+            <NavLink className="px-5 font-bold py-2 transition-all text-slate-600 hover:text-slate-400" to={"/videolar"}>
+                VIDEOLAR
+            </NavLink>
             <NavLink className="px-5 font-bold py-2 transition-all text-slate-600 hover:text-slate-400" to={"/etkinlikler"}>
                 ETKİNLİKLER
             </NavLink>
