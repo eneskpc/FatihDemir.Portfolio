@@ -6,7 +6,7 @@ const Body = () => {
     switch (page) {
         case "hakkinda":
             return <div className='py-10 px-2 md:px-10'>
-                <h3 className='font-bold text-3xl pb-10'>Hakkında</h3>
+                <h1 className='font-bold text-3xl pb-10'>Hakkında</h1>
                 <p className='pb-2'>
                     5 Temmuz 1993 yılında İstanbul’da dünyaya gelen Fatih Demir, Klasik Türk Mûsikîsi ve Tasavvuf Mûsikîsi sanatçısıdır. İlk ve orta öğrenimini İstanbul’da tamamlayan sanatçı, küçük yaşlarda “tambur” ve “bendir” eğitimleri almaya başlayarak müzik dünyasına ilk adımlarını atmıştır.
                 </p>

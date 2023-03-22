@@ -1,33 +1,14 @@
-import { useRef, useEffect } from 'react';
 import JumbutronImage from '../assets/images/jumbutron-image.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple, faGooglePlay, faSpotify, faDeezer } from '@fortawesome/free-brands-svg-icons'
 
 const Home = () => {
-    const jumbutronRef = useRef<HTMLDivElement | null>(null);
-
-    const handleResize = () => {
-        if (jumbutronRef && jumbutronRef.current) {
-            jumbutronRef.current.scrollTo(1000, 0);
-        }
-    }
-
-    useEffect(() => {
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-
     return (
         <div className="min-h-screen">
-            <div ref={jumbutronRef} className="relative overflow-hidden h-screen">
-                <img src={JumbutronImage} className="w-full scale-100 md:scale-125" />
-                <div className="absolute top-0 left-0 w-full h-full flex justify-between items-center">
-                    <div></div>
+            <div className="relative overflow-hidden h-screen">
+                <img src={JumbutronImage} className="transition-all w-full md:scale-125 md:-translate-x-[12.5%]" />
+                <div className="transition-all absolute top-0 left-0 w-full h-full flex justify-between items-center md:-translate-x-[12.5%]">
+                    <div className='hidden md:block'></div>
                     <div className='relative rounded-lg p-10'>
                         <div className='z-10 absolute ice-box top-0 left-0 w-full h-full'></div>
                         <div className='z-50 relative'>

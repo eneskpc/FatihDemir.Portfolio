@@ -1,6 +1,6 @@
-import { useEffect, useReducer, useRef, useState } from "react";
-import { useAppSelector, useAppDispatch } from '../app/hooks'
-import { changeHeight } from '../app/features/themeSlice'
+import { useEffect, useRef, useState } from "react";
+import { useAppDispatch } from '../app/hooks'
+import { changeHeaderHeight } from '../app/features/themeSlice'
 import HeaderMenu from "./HeaderMenu"
 import { GetScrollPosition } from "../Helper";
 
@@ -12,7 +12,7 @@ const Header = () => {
     const handleResize = () => {
         if (headerContainerRef && headerContainerRef.current) {
             dispatch(
-                changeHeight(headerContainerRef.current.clientHeight)
+                changeHeaderHeight(headerContainerRef.current.clientHeight)
             );
         }
     }

@@ -2,22 +2,27 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ThemeState {
   headerHeight: number;
+  footerHeight: number;
 }
 
 const initialState = {
   headerHeight: 0,
+  footerHeight: 0,
 } as ThemeState;
 
 const themeSlice = createSlice({
   name: "theme",
   initialState,
   reducers: {
-    changeHeight: (state, action: PayloadAction<number>) => {
+    changeHeaderHeight: (state, action: PayloadAction<number>) => {
       state.headerHeight = action.payload;
+    },
+    changeFooterHeight: (state, action: PayloadAction<number>) => {
+      state.footerHeight = action.payload;
     },
   },
 });
 
-export const { changeHeight } = themeSlice.actions;
+export const { changeHeaderHeight, changeFooterHeight } = themeSlice.actions;
 
 export default themeSlice.reducer;

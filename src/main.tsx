@@ -8,6 +8,10 @@ import store from './app/store'
 import { Provider } from 'react-redux'
 import './index.css'
 import Videos from './components/Videos'
+import moment from "moment";
+import "moment/dist/locale/tr";
+
+moment.locale("tr")
 
 const router = createBrowserRouter([{
   path: "/",
