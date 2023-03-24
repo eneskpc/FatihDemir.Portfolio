@@ -10,18 +10,14 @@ const Header = () => {
     const dispatch = useAppDispatch();
 
     const handleResize = () => {
-        if (headerContainerRef && headerContainerRef.current) {
-            dispatch(
-                changeHeaderHeight(headerContainerRef.current.clientHeight)
-            );
-        }
+        dispatch(
+            changeHeaderHeight(headerSize)
+        );
     }
 
     const handleScrolling = () => {
         if (headerContainerRef && headerContainerRef.current) {
-            if (window.innerWidth < 769) {
-                setHeaderSize(270);
-            } else if (GetScrollPosition() > 0)
+            if (GetScrollPosition() > 0)
                 setHeaderSize(100);
             else
                 setHeaderSize(150);
@@ -41,16 +37,14 @@ const Header = () => {
     }, []);
 
     useEffect(() => {
-        setTimeout(() => {
-            handleResize();
-        }, 75)
+        handleResize();
     }, [headerSize]);
 
     return (
         <div ref={headerContainerRef} style={{
             height: headerSize
-        }} className="transition-all fixed w-full z-[999] bg-white flex flex-col md:flex-row justify-between items-center py-10 px-0 md:px-10 md:py-0 shadow">
-            <h1 className="font-marck text-5xl w-full whitespace-nowrap md:text-left text-center">Fatih Demir</h1>
+        }} className="transition-all fixed w-full z-[999] bg-white flex justify-between items-center px-10 py-0 shadow">
+            <h1 className="hidden md:block font-marck text-5xl w-full whitespace-nowrap md:text-left text-center">Fatih Demir</h1>
             <div className="hover:animate-spin flex-shrink-0 bg-neutral-700 w-20 h-20 text-white rounded-full flex justify-center items-center">
                 <strong className="font-marck text-2xl mb-2">F</strong>
                 <strong className="font-marck text-2xl mt-2">D</strong>

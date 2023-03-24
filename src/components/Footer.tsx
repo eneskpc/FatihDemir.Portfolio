@@ -22,11 +22,11 @@ const Footer = () => {
 
     return (
         <div ref={footerContainerRef} className="bg-slate-900 p-10 text-white flex justify-between items-center">
-            <div>
+            <div className='whitespace-nowrap'>
                 <a className='mr-3 transition-all hover:scale-125' href='https://www.youtube.com/@fatihdemir3688' target={"_blank"}>
                     <FontAwesomeIcon icon={faYoutube} fixedWidth />
                 </a>
-                <a className='transition-all hover:scale-125' href='https://www.instagram.com/ffatihdmr' target={"_blank"}>
+                <a className='mr-3 transition-all hover:scale-125' href='https://www.instagram.com/ffatihdmr' target={"_blank"}>
                     <FontAwesomeIcon icon={faInstagram} fixedWidth />
                 </a>
             </div>

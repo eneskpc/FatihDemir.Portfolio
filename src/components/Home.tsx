@@ -9,8 +9,8 @@ const Home = () => {
                 <img src={JumbutronImage} className="transition-all w-full md:scale-125 md:-translate-x-[12.5%]" />
                 <div className="transition-all absolute top-0 left-0 w-full h-full flex justify-between items-center md:-translate-x-[12.5%]">
                     <div className='hidden md:block'></div>
-                    <div className='relative rounded-lg p-10'>
-                        <div className='z-10 absolute ice-box top-0 left-0 w-full h-full'></div>
+                    <div className='relative rounded-lg p-10 w-full md:w-auto'>
+                        <div className='z-10 absolute ice-box rounded-2xl top-0 left-0 w-full h-full'></div>
                         <div className='z-50 relative'>
                             <h3 className="py-4 text-center font-bold text-2xl text-stone-700">YENİ SINGLE ÇIKTI !</h3>
                             <iframe className='md:w-96 w-full' src="https://open.spotify.com/embed/track/4a16511IE7eJCDdEJ207sn?utm_source=generator" width="100%" height="152" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -31,9 +31,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-
             </div>
         </div>
     )

@@ -1,12 +1,13 @@
 import { useGetYoutubeSearchListQuery } from "../apis/youtubeAPI"
 import YoutubeKinds from "../types/YoutubeKinds";
+import LoadingIndicator from "./LoadingIndicator";
 import VideoCard from "./VideoCard"
 
 const Videos = () => {
   const { data, error, isLoading } = useGetYoutubeSearchListQuery("");
 
   if (isLoading) {
-    <div> Youtube Videoları Yolda Geliyor... </div>
+    return <LoadingIndicator />
   }
 
   return (

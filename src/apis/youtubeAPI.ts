@@ -10,7 +10,7 @@ export const youtubeApi = createApi({
   endpoints: (builder) => ({
     GetYoutubeSearchList: builder.query<YoutubeSearchListResponse, string>({
       query: (pageToken) =>
-        `search?key=${GetYoutubeAPIKey()}&channelId=${GetChannelId()}&maxResults=50&part=snippet${pageToken ? `&pageToken=${pageToken}`: ""}`,
+        `search?key=${GetYoutubeAPIKey()}&channelId=${GetChannelId()}&maxResults=50&order=date&part=snippet${pageToken ? `&pageToken=${pageToken}`: ""}`,
     }),
   }),
 });
